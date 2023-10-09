@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		        width:100%;
+		        padding-left:2%;
+		        padding-right:2%;
+		    }
+		    div{
+		        height:10%;
+		        width:9%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+	<body>
+		<script>
+		    //add 100 divs to the canvas
+            var colors = [red, blue, green, yellow];
+            
+		    for (let i = 0; i <= 100; i++){
+                var dv = document.createElement('div');
+                dv.addEventListener('onmouseover', paint);
+                document.body.appendChild('dv');
+            }
+
+            function paint(){
+                colors.Math.floor(Math.random() * 5);
+            }
+		    //write function paint 
+		</script>
+	</body>
+</html>
