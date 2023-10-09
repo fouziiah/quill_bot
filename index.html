@@ -20,18 +20,47 @@
 	<body>
 		<script>
 		    //add 100 divs to the canvas
-            var colors = [red, blue, green, yellow];
+            // var colors = [red, blue, green, yellow];
             
-		    for (let i = 0; i <= 100; i++){
-                var dv = document.createElement('div');
-                dv.addEventListener('onmouseover', paint);
-                document.body.appendChild('dv');
+		    // for (let i = 0; i <= 100; i++){
+            //     var dv = document.createElement('div');
+            //     dv.addEventListener('onmouseover', paint);
+            //     document.body.appendChild('dv');
+            // }
+
+            // function paint(){
+            //     colors.Math.floor(Math.random() * 5);
+            // }
+		    //write function paint 
+
+            for (var i = 0; i < 100; i++){
+                var div = document.createElement('div')
+                div.addEventListener("mouseover", paint);
+                document.body.appendChild(div);
             }
 
             function paint(){
-                colors.Math.floor(Math.random() * 5);
+                var rand = parseInt(Math.random()* 4);
+                var color = pickColor(rand);
+                this.style.backgroundColor = color;
             }
-		    //write function paint 
+
+            function pickColor(num){
+                if(num == 0){
+                    return "orange";
+                }else if(num == 1){
+                    return "lightblue"
+                }else if(num == 2){
+                    return "green"
+                }else(num == 3)
+                {
+                    return "yellow";
+                }
+            }
+
+
+
+
 		</script>
 	</body>
 </html>
